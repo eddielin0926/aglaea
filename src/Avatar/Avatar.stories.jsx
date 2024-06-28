@@ -1,29 +1,29 @@
-import { Avatar } from './Avatar';
+import { Avatar } from "./Avatar";
 
 export default {
-  title: 'Design System/Avatar',
+  title: "Design System/Avatar",
   component: Avatar,
 };
 
 export const Standard = {
   args: {
-    size: 'large',
-    username: 'Tom Coleman',
-    src: 'https://avatars2.githubusercontent.com/u/132554',
+    size: "large",
+    username: "Tom Coleman",
+    src: "https://avatars2.githubusercontent.com/u/132554",
   },
 };
 
 export const Sizes = {
   args: {
-    username: 'Tom Coleman',
-    src: 'https://avatars2.githubusercontent.com/u/132554',
+    username: "Tom Coleman",
+    src: "https://avatars2.githubusercontent.com/u/132554",
   },
   render: (args) => (
     <>
-      <Avatar {...args} size='large' />
-      <Avatar {...args} size='medium' />
-      <Avatar {...args} size='small' />
-      <Avatar {...args} size='tiny' />
+      <Avatar {...args} size="large" />
+      <Avatar {...args} size="medium" />
+      <Avatar {...args} size="small" />
+      <Avatar {...args} size="tiny" />
     </>
   ),
 };
@@ -31,10 +31,10 @@ export const Sizes = {
 export const Initials = {
   render: (args) => (
     <>
-      <Avatar username='Tom Coleman' />
-      <Avatar username='Dominic Nguyen' />
-      <Avatar username='Varun Vachhar' />
-      <Avatar username='Michael Shilman' />
+      <Avatar username="Tom Coleman" />
+      <Avatar username="Dominic Nguyen" />
+      <Avatar username="Varun Vachhar" />
+      <Avatar username="Michael Shilman" />
     </>
   ),
 };
@@ -45,10 +45,10 @@ export const Loading = {
   },
   render: (args) => (
     <>
-      <Avatar {...args} size='large' />
-      <Avatar {...args} size='medium' />
-      <Avatar {...args} size='small' />
-      <Avatar {...args} size='tiny' />
+      <Avatar {...args} size="large" />
+      <Avatar {...args} size="medium" />
+      <Avatar {...args} size="small" />
+      <Avatar {...args} size="tiny" />
     </>
   ),
 };
@@ -56,13 +56,22 @@ export const Loading = {
 export const Large = {
   render: () => (
     <>
-      <Avatar loading size='large' />
-      <Avatar size='large' username='Tom Coleman' />
+      <Avatar loading size="large" />
+      <Avatar size="large" username="Tom Coleman" />
       <Avatar
-        size='large'
-        username='Tom Coleman'
-        src='https://avatars2.githubusercontent.com/u/132554'
+        size="large"
+        username="Tom Coleman"
+        src="https://avatars2.githubusercontent.com/u/132554"
       />
     </>
   ),
+};
+
+export const Controls = {
+  args: {
+    loading: false,
+    size: "tiny",
+    username: "Dominic Nguyen",
+    src: "https://avatars2.githubusercontent.com/u/263385",
+  },
 };

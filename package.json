@@ -15,9 +15,10 @@
     "clean": "rimraf ./dist",
     "prebuild": "yarn clean",
     "release": "yarn build && auto shipit",
-    "test": "test-storybook",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "test-storybook": "test-storybook",
+    "build-storybook": "storybook build",
+    "build-storybook-docs": "storybook build  --docs"
   },
   "devDependencies": {
     "@babel/core": "^7.22.5",
