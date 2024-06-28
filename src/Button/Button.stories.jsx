@@ -1,9 +1,10 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
-import { Button } from './Button';
-import { Icon } from '../Icon/Icon';
-import { StoryLinkWrapper } from '../LinkWrapper';
+import { Icon } from "../Icon/Icon";
+import { StoryLinkWrapper } from "../LinkWrapper";
+import { Button } from "./Button";
 
+import { expect, userEvent, within } from "@storybook/test";
 
 const CustomButton = styled.button`
   border: 1px solid green;
@@ -18,60 +19,60 @@ function ButtonWrapper(props) {
 }
 
 export default {
-  title: 'Design System/Button',
+  title: "Design System/Button",
   component: Button,
 };
 
 export const AllButtons = {
-  name: 'all buttons',
+  name: "all buttons",
   render: () => (
     <>
-      <Button appearance='primary'>Primary</Button>
-      <Button appearance='secondary'>Secondary</Button>
-      <Button appearance='tertiary'>Tertiary</Button>
-      <Button appearance='outline'>Outline</Button>
-      <Button appearance='primaryOutline'>Outline primary</Button>
-      <Button appearance='secondaryOutline'>Outline secondary</Button>
-      <Button appearance='primary' isDisabled>
+      <Button appearance="primary">Primary</Button>
+      <Button appearance="secondary">Secondary</Button>
+      <Button appearance="tertiary">Tertiary</Button>
+      <Button appearance="outline">Outline</Button>
+      <Button appearance="primaryOutline">Outline primary</Button>
+      <Button appearance="secondaryOutline">Outline secondary</Button>
+      <Button appearance="primary" isDisabled>
         Disabled
       </Button>
       <br />
-      <Button appearance='primary' isLoading>
+      <Button appearance="primary" isLoading>
         Primary
       </Button>
-      <Button appearance='secondary' isLoading>
+      <Button appearance="secondary" isLoading>
         Secondary
       </Button>
-      <Button appearance='tertiary' isLoading>
+      <Button appearance="tertiary" isLoading>
         Tertiary
       </Button>
-      <Button appearance='outline' isLoading>
+      <Button appearance="outline" isLoading>
         Outline
       </Button>
-      <Button appearance='outline' isLoading loadingText='Custom...'>
+      <Button appearance="outline" isLoading loadingText="Custom...">
         Outline
       </Button>
       <br />
-      <Button appearance='primary' size='small'>
+      <Button appearance="primary" size="small">
         Primary
       </Button>
-      <Button appearance='secondary' size='small'>
+      <Button appearance="secondary" size="small">
         Secondary
       </Button>
-      <Button appearance='tertiary' size='small'>
+      <Button appearance="tertiary" size="small">
         Tertiary
       </Button>
-      <Button appearance='outline' size='small'>
+      <Button appearance="outline" size="small">
         Outline
       </Button>
-      <Button appearance='primary' isDisabled size='small'>
+      <Button appearance="primary" isDisabled size="small">
         Disabled
       </Button>
-      <Button appearance='outline' size='small' containsIcon>
-        <Icon icon='link' aria-label='Link' />
+      <Button appearance="outline" size="small" containsIcon>
+        <Icon icon="link" aria-label="Link" />
       </Button>
-      <Button appearance='outline' size='small'>
-        <Icon icon='link' />
+      <Button appearance="outline" size="small">
+        <Icon icon="link" />
         Link
       </Button>
     </>
@@ -79,84 +80,84 @@ export const AllButtons = {
 };
 
 export const buttonWrapper = {
-  name: 'button wrapper',
+  name: "button wrapper",
   render: () => (
     <div>
       <ButtonWrapper>Original Button Wrapper</ButtonWrapper>
       <br />
-      <Button ButtonWrapper={ButtonWrapper} appearance='primary'>
+      <Button ButtonWrapper={ButtonWrapper} appearance="primary">
         Primary
       </Button>
-      <Button ButtonWrapper={ButtonWrapper} appearance='secondary'>
+      <Button ButtonWrapper={ButtonWrapper} appearance="secondary">
         Secondary
       </Button>
-      <Button ButtonWrapper={ButtonWrapper} appearance='tertiary'>
+      <Button ButtonWrapper={ButtonWrapper} appearance="tertiary">
         Tertiary
       </Button>
-      <Button ButtonWrapper={ButtonWrapper} appearance='outline'>
+      <Button ButtonWrapper={ButtonWrapper} appearance="outline">
         Outline
       </Button>
-      <Button ButtonWrapper={ButtonWrapper} appearance='primaryOutline'>
+      <Button ButtonWrapper={ButtonWrapper} appearance="primaryOutline">
         Outline primary
       </Button>
-      <Button ButtonWrapper={ButtonWrapper} appearance='secondaryOutline'>
+      <Button ButtonWrapper={ButtonWrapper} appearance="secondaryOutline">
         Outline secondary
       </Button>
-      <Button ButtonWrapper={ButtonWrapper} appearance='primary' isDisabled>
+      <Button ButtonWrapper={ButtonWrapper} appearance="primary" isDisabled>
         Disabled
       </Button>
       <br />
-      <Button ButtonWrapper={ButtonWrapper} appearance='primary' isLoading>
+      <Button ButtonWrapper={ButtonWrapper} appearance="primary" isLoading>
         Primary
       </Button>
-      <Button ButtonWrapper={ButtonWrapper} appearance='secondary' isLoading>
+      <Button ButtonWrapper={ButtonWrapper} appearance="secondary" isLoading>
         Secondary
       </Button>
-      <Button ButtonWrapper={ButtonWrapper} appearance='tertiary' isLoading>
+      <Button ButtonWrapper={ButtonWrapper} appearance="tertiary" isLoading>
         Tertiary
       </Button>
-      <Button ButtonWrapper={ButtonWrapper} appearance='outline' isLoading>
+      <Button ButtonWrapper={ButtonWrapper} appearance="outline" isLoading>
         Outline
       </Button>
       <Button
         ButtonWrapper={ButtonWrapper}
-        appearance='outline'
+        appearance="outline"
         isLoading
-        loadingText='Custom...'
+        loadingText="Custom..."
       >
         Outline
       </Button>
       <br />
-      <Button ButtonWrapper={ButtonWrapper} appearance='primary' size='small'>
+      <Button ButtonWrapper={ButtonWrapper} appearance="primary" size="small">
         Primary
       </Button>
-      <Button ButtonWrapper={ButtonWrapper} appearance='secondary' size='small'>
+      <Button ButtonWrapper={ButtonWrapper} appearance="secondary" size="small">
         Secondary
       </Button>
-      <Button ButtonWrapper={ButtonWrapper} appearance='tertiary' size='small'>
+      <Button ButtonWrapper={ButtonWrapper} appearance="tertiary" size="small">
         Tertiary
       </Button>
-      <Button ButtonWrapper={ButtonWrapper} appearance='outline' size='small'>
+      <Button ButtonWrapper={ButtonWrapper} appearance="outline" size="small">
         Outline
       </Button>
       <Button
         ButtonWrapper={ButtonWrapper}
-        appearance='primary'
+        appearance="primary"
         isDisabled
-        size='small'
+        size="small"
       >
         Disabled
       </Button>
       <Button
         ButtonWrapper={ButtonWrapper}
-        appearance='outline'
-        size='small'
+        appearance="outline"
+        size="small"
         containsIcon
       >
-        <Icon icon='link' aria-label='Link' />
+        <Icon icon="link" aria-label="Link" />
       </Button>
-      <Button ButtonWrapper={ButtonWrapper} appearance='outline' size='small'>
-        <Icon icon='link' />
+      <Button ButtonWrapper={ButtonWrapper} appearance="outline" size="small">
+        <Icon icon="link" />
         Link
       </Button>
     </div>
@@ -164,166 +165,188 @@ export const buttonWrapper = {
 };
 
 export const AnchorWrapper = {
-  name: 'anchor wrapper',
+  name: "anchor wrapper",
   render: () => (
     <div>
-      <StoryLinkWrapper to='http://storybook.js.org'>
+      <StoryLinkWrapper to="http://storybook.js.org">
         Original Link Wrapper
       </StoryLinkWrapper>
       <br />
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='primary'
-        href='http://storybook.js.org'
+        appearance="primary"
+        href="http://storybook.js.org"
       >
         Primary
       </Button>
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='secondary'
-        href='http://storybook.js.org'
+        appearance="secondary"
+        href="http://storybook.js.org"
       >
         Secondary
       </Button>
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='tertiary'
-        href='http://storybook.js.org'
+        appearance="tertiary"
+        href="http://storybook.js.org"
       >
         Tertiary
       </Button>
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='outline'
-        href='http://storybook.js.org'
+        appearance="outline"
+        href="http://storybook.js.org"
       >
         Outline
       </Button>
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='primaryOutline'
-        href='http://storybook.js.org'
+        appearance="primaryOutline"
+        href="http://storybook.js.org"
       >
         Outline primary
       </Button>
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='secondaryOutline'
-        href='http://storybook.js.org'
+        appearance="secondaryOutline"
+        href="http://storybook.js.org"
       >
         Outline secondary
       </Button>
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='primary'
+        appearance="primary"
         isDisabled
-        href='http://storybook.js.org'
+        href="http://storybook.js.org"
       >
         Disabled
       </Button>
       <br />
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='primary'
+        appearance="primary"
         isLoading
-        href='http://storybook.js.org'
+        href="http://storybook.js.org"
       >
         Primary
       </Button>
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='secondary'
+        appearance="secondary"
         isLoading
-        href='http://storybook.js.org'
+        href="http://storybook.js.org"
       >
         Secondary
       </Button>
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='tertiary'
+        appearance="tertiary"
         isLoading
-        href='http://storybook.js.org'
+        href="http://storybook.js.org"
       >
         Tertiary
       </Button>
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='outline'
+        appearance="outline"
         isLoading
-        href='http://storybook.js.org'
+        href="http://storybook.js.org"
       >
         Outline
       </Button>
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='outline'
+        appearance="outline"
         isLoading
-        loadingText='Custom...'
-        href='http://storybook.js.org'
+        loadingText="Custom..."
+        href="http://storybook.js.org"
       >
         Outline
       </Button>
       <br />
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='primary'
-        size='small'
-        href='http://storybook.js.org'
+        appearance="primary"
+        size="small"
+        href="http://storybook.js.org"
       >
         Primary
       </Button>
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='secondary'
-        size='small'
-        href='http://storybook.js.org'
+        appearance="secondary"
+        size="small"
+        href="http://storybook.js.org"
       >
         Secondary
       </Button>
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='tertiary'
-        size='small'
-        href='http://storybook.js.org'
+        appearance="tertiary"
+        size="small"
+        href="http://storybook.js.org"
       >
         Tertiary
       </Button>
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='outline'
-        size='small'
-        href='http://storybook.js.org'
+        appearance="outline"
+        size="small"
+        href="http://storybook.js.org"
       >
         Outline
       </Button>
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='primary'
+        appearance="primary"
         isDisabled
-        size='small'
-        href='http://storybook.js.org'
+        size="small"
+        href="http://storybook.js.org"
       >
         Disabled
       </Button>
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='outline'
-        size='small'
+        appearance="outline"
+        size="small"
         containsIcon
-        href='http://storybook.js.org'
+        href="http://storybook.js.org"
       >
-        <Icon icon='link' aria-label='Link' />
+        <Icon icon="link" aria-label="Link" />
       </Button>
       <Button
         ButtonWrapper={StoryLinkWrapper}
-        appearance='outline'
-        size='small'
-        href='http://storybook.js.org'
+        appearance="outline"
+        size="small"
+        href="http://storybook.js.org"
       >
-        <Icon icon='link' />
+        <Icon icon="link" />
         Link
       </Button>
     </div>
   ),
 };
 
+/*
+ * New story using the play function.
+ * See https://storybook.js.org/docs/react/writing-stories/play-function
+ * to learn more about the play function.
+ */
+export const WithInteractions = {
+  args: {
+    appearance: "primary",
+    href: "http://storybook.js.org",
+    ButtonWrapper: StoryLinkWrapper,
+    children: "Button",
+  },
+  play: async ({ canvasElement }) => {
+    // Assigns canvas to the component root element
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole("link"));
+    expect(canvas.getByRole("link")).toHaveAttribute(
+      "href",
+      "http://storybook.js.org"
+    );
+  },
+};
