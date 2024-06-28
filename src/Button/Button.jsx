@@ -1,9 +1,9 @@
+import { forwardRef } from 'react';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { darken, rgba } from 'polished';
-import PropTypes from 'prop-types';
-import { forwardRef } from 'react';
-import { easing } from '../shared/animation';
 import { color, typography } from '../shared/styles';
+import { easing } from '../shared/animation';
 
 const Text = styled.span`
   display: inline-block;
@@ -33,7 +33,7 @@ const SIZES = {
 };
 
 const StyledButton = styled.button`
-  border: 10px solid red;
+  border: 0;
   border-radius: 3em;
   cursor: pointer;
   display: inline-block;
