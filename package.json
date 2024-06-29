@@ -1,14 +1,20 @@
 {
   "name": "aglaea",
+  "description": "A design system for React",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eddielin0926/aglaea"
+  },
+  "author": "Eddie Lin <eddielin0926@gmail.com>",
+  "private": false,
   "files": [
     "dist/**/*",
     "README.md"
   ],
-  "license": "MIT",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
     "watch": "rollup --watch -c --bundleConfigAsCjs",
