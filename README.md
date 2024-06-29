@@ -1,6 +1,19 @@
-# Aglaea
+<p align="center">
+  <a href="https://github.com/eddielin0926/aglaea">
+    <picture>
+      <source media="(prefers-color-scheme: light)" srcset="./docs/imgs/aglaea-icon.png">
+      <source media="(prefers-color-scheme: dark)" srcset="./docs/imgs/aglaea-icon-dark.png">
+      <img alt="Aglaea Icon" width="128">
+    </picture>
+  </a>
+</p>
 
-Aglaea is a simple design system.
+<h1 align="center">
+  Aglaea
+</h1>
+<p align="center">
+A simple design system for learning Storybook and Stylex.
+</p>
 
 ## Setup
 
