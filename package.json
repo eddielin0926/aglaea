@@ -1,7 +1,7 @@
 {
   "name": "aglaea",
   "description": "A design system for React",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

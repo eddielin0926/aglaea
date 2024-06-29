@@ -1,3 +1,11 @@
+## [0.2.0](https://github.com/eddielin0926/aglaea/compare/v0.1.1...v0.2.0) (2024-06-29)
+
+
+### Features
+
+* :sparkles: add AvatarList and stories ([4d9f81e](https://github.com/eddielin0926/aglaea/commit/4d9f81e953131a01c0cd487ca98594bdf852933f))
+* :sparkles: export AvatarList ([39284ae](https://github.com/eddielin0926/aglaea/commit/39284aed4f5c7e7f4dcc07362e0e42ca7a8b0353))
+
 # v0.1.1 (Sat Jun 29 2024)
 
 #### 🐛 Bug Fix
