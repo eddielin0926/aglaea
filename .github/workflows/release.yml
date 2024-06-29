@@ -45,10 +45,14 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Release on NPM
-        run: yarn npm publish
+      - name: Authentication
+        run: |
+          echo npmAuthToken: "$NODE_AUTH_TOKEN" >> ./.yarnrc.yml
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Release on NPM
+        run: yarn npm publish --access public --tag latest --tolerate-republish
 
       - name: Release on GitHub
         uses: softprops/action-gh-release@v2
