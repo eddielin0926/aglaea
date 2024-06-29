@@ -131,3 +131,6 @@ dist
 
 # Storybook build outputs
 build-storybook.log
+
+# VSCode
+.vscode/*
