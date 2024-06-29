@@ -7,10 +7,9 @@
   "module": "dist/esm/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eddielin0926/aglaea"
+    "url": "git+https://github.com/eddielin0926/aglaea"
   },
   "author": "Eddie Lin <eddielin0926@gmail.com>",
-  "private": false,
   "files": [
     "dist/**/*",
     "README.md"
