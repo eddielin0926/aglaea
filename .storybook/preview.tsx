@@ -1,12 +1,10 @@
-import { Global } from "@emotion/react";
-import { GlobalStyle } from "../src/shared/global";
+import { Preview } from "@storybook/react";
+import React from "react";
 
-/** @type { import('@storybook/react').Preview } */
-const preview = {
+const preview: Preview = {
   decorators: [
     (Story) => (
       <>
-        <Global styles={GlobalStyle} />
         <Story />
       </>
     ),

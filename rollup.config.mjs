@@ -30,12 +30,12 @@ export default [
     plugins: [
       peerDepsExternal(),
       resolve({
-        extensions: [".js", ".jsx"],
+        extensions: [".js", ".ts", ".jsx", ".tsx"],
       }),
       commonjs(),
       terser(),
       babel({
-        extensions: [".js", ".jsx"],
+        extensions: [".js", ".ts", ".jsx", "tsx"],
         exclude: "node_modules/**",
       }),
     ],
