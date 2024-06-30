@@ -15,5 +15,5 @@
     ],
     "@babel/preset-typescript"
   ],
-  "plugins": ["@emotion/babel-plugin"]
+  "plugins": ["@emotion/babel-plugin", "@stylexjs/babel-plugin"]
 }

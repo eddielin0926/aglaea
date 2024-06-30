@@ -2,6 +2,7 @@ import { babel } from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 import terser from "@rollup/plugin-terser";
+import stylexPlugin from "@stylexjs/rollup-plugin";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
 // This is required to read package.json file when
@@ -34,6 +35,7 @@ export default [
       }),
       commonjs(),
       terser(),
+      stylexPlugin.default(),
       babel({
         extensions: [".js", ".ts", ".jsx", "tsx"],
         exclude: "node_modules/**",

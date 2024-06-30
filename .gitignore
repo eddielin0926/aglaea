@@ -133,4 +133,7 @@ dist
 build-storybook.log
 
 # VSCode
-.vscode/*
+.vscode/
+
+# Rollup
+.rollup.cache/
